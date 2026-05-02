@@ -286,13 +286,6 @@
       <div class="tag-label">Why AgroHydros</div>
       <h2 class="section-h">Not just watering —<br><span class="g-text">complete environment control</span></h2>
       <p class="section-p" style="margin-bottom:0">Traditional irrigation systems water on a timer. AgroHydros thinks, predicts, and acts autonomously — integrating every environmental variable into a single protective intelligence.</p>
-      <ul class="why-points">
-        <li><div class="wp-icon"></div>Edge AI inference under 50ms — no cloud dependency, works offline</li>
-        <li><div class="wp-icon"></div>Self-calibrating sensors with drift correction and fault detection</li>
-        <li><div class="wp-icon"></div>Integrates 30+ weather data sources for hyper-local forecasts</li>
-        <li><div class="wp-icon"></div>Autonomous actuation — pumps, vents, and misters controlled automatically</li>
-        <li><div class="wp-icon"></div>Carbon-neutral hardware, ISO 14001 certified operations</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -315,16 +308,20 @@
     <!-- Form -->
     <div id="wlFormWrap">
       <div class="wl-form">
+        <input type="text" class="wl-input" id="wlName" placeholder="Your name">
         <input type="email" class="wl-input" id="wlEmail" placeholder="Enter your email address…">
-        <button class="wl-btn" onclick="joinWaitlist()">Notify Me →</button>
+        <input type="tel" class="wl-input" id="wlPhone" placeholder="Phone number">
+        <button class="wl-btn" id="wlSubmit" onclick="joinWaitlist()">Notify Me →</button>
       </div>
+      <p class="wl-error" id="wlError" role="alert"></p>
       <p class="wl-note">No spam, ever. Unsubscribe anytime. We respect your privacy.</p>
       <div class="wl-count">
         <div class="wl-avatars">
-          <div class="wl-av av1">S</div>
-          <div class="wl-av av2">A</div>
-          <div class="wl-av av3">R</div>
-          <div class="wl-av av4">K</div>
+          <div class="wl-av av1">j</div>
+          <div class="wl-av av2">i</div>
+          <div class="wl-av av3">h</div>
+          <div class="wl-av av4">a</div>
+          <div class="wl-av av1">n</div>
         </div>
         <span><strong style="color:var(--white)">5,248</strong> people already joined</span>
       </div>
@@ -340,19 +337,12 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
-<footer>
-  <a href="#hero" class="ft-logo">
-    <div class="ft-logo-m">🌿</div>
-    Agro<span>Hydros</span>
-  </a>
-  <div class="ft-links">
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-    <a href="#">Docs</a>
-    <a href="#">Contact</a>
-  </div>
+<footer style="align-content: center;">
   <p class="ft-copy">© 2026 AgroHydros</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
